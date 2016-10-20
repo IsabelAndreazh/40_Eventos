@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<title>TodoApp</title> 
+		<link rel="shortcut icon" href="">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body >
+		<div class="container"><!-- cabecera -->
+			<div class="row ">
+				<h3 class="bg-gray text-center encabezado">TODO APP</h3>
+			</div>		
+		</div>
+		<div class="container"><!-- seccion para agregar nueva tarea -->
+ 			<textarea class="form-control mb-1" rows="5" id="lista" placeholder="añade tu nueva area"></textarea>
+ 			<button type="button" class="btn btn-md  btn-success" onclick="newElement()" >+ añadir tarea</button>
+ 			<div class="checkbox">
+ 			<ul id="UL" class="pre-scrollable checked"></ul><!-- lista de tareas -->
+ 			</div>
+		</div>
+	
+	 	<script type='text/javascript' src='js/main.js'></script>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
