@@ -1,23 +1,15 @@
 
 var close = document.getElementsByClassName("close");//borra tarea de la lista
-var i;
-for (i = 0; i < close.length; i++) {
+for (var i = 0; i < close.length; i++) {
   close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
   }
 }
-
-var list = document.querySelector('ul');// checked
-list.addEventListener('click', function(ev)  {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-
 function newElement() { // agrega tarea a la lista
   var box=document.createElement("input");
+  box.type="checkbox";
+  box.onclick = function(ev){
+    ev.target.parentNode.classList.toggle("checked");
+  }
   var li = document.createElement("li");
   var inputValue = document.getElementById("lista").value;
   var t = document.createTextNode(inputValue);
@@ -36,12 +28,12 @@ function newElement() { // agrega tarea a la lista
   span.appendChild(txt);
   li.appendChild(span);
 
-  for (i = 0; i < close.length; i++) {
+  for (var i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
     }
   }
-  box.type="checkbox";
+  
 }
 

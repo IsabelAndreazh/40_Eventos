@@ -1,0 +1,24 @@
+.mb-1{	margin-bottom: 1%;}
+
+.bg-gray{	background-color: #CBC1C1;}
+.pre-scrollable{height: 5em;}
+p{
+	color: green;
+	text-align: center;
+	margin-top: 3%;
+}
+
+ul li {
+    cursor: pointer;
+    list-style-type: none;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+}
+
+
+@media screen and (max-width : 600px) {
+}
+@media screen and (max-width: 920px) {
+}
