@@ -1,45 +1,52 @@
-var close = document.getElementsByClassName("lista");//borra tarea de la lista
-for (var i = 0; i < close.length; i++) {
-  lista[i].onclick = function() {
-  }
-}
+function lista() { 
+    var input=document.createElement("input"); // agrega lista
+    var textoInput=document.createTextNode("Guardar");
+    input.id="guardarInput";
+    input.appendChild(textoInput);
+    var inputValue=document.getElementById("formulario");
+    formulario.appendChild(input);
 
-var list = document.querySelector('ul');// checked
-list.addEventListener('click', function(ev)  {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+    var botonNombreLista=document.createElement("button");
+    var texto=document.createTextNode("Guardar");
+    botonNombreLista.className="submit";
+    botonNombreLista.appendChild(texto);
+    formulario.appendChild(botonNombreLista);
 
+    botonNombreLista.onclick = function(){ 
+        var div= document.createElement("div");//guarda nombre de la lista
+        var divValue=input.value;
+        var titulo=document.createTextNode(divValue);
+        div.appendChild(titulo);
+        inputValue.appendChild(div);
 
+        var botonAñadirLista=document.createElement("button");//boton para crear tarjeta
+        var texto=document.createTextNode("Añadir lista");
+        botonAñadirLista.className="submit";
+        botonAñadirLista.appendChild(texto);
+        formulario.appendChild(botonAñadirLista);
 
-function nombreDeLaLista() { // agregar nombre
-  var input=document.createElement("textarea");
-  var li = document.createElement("li");
-  //var inputValue = document.getElementById("lista").value;
-  var t = document.createTextNode(inputValue);
-   li.appendChild(input);
-   li.appendChild(t);
-  if (inputValue === '') {
-    alert("Escribe algo");
-  } else {
-    document.getElementById("UL").appendChild(li);
-  }
-  //document.getElementById("lista").value = "";
+        botonAñadirLista.onclick = function(){ // agrega tarjeta
+            var textArea=document.createElement("textarea"); 
+            textArea.type="textarea";
+            var inputValue=document.getElementById("formulario");
+            formulario.appendChild(textArea);
 
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
+            var botonAgregarLista=document.createElement("button");
+            var texto=document.createTextNode("Agregar tarjeta");
+            botonAgregarLista.className="submit";
+            botonAgregarLista.appendChild(texto);
+            formulario.appendChild(botonAgregarLista);
 
-  for (var i = 0; i < close.length; i++) {
-    lista[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
+           
+            botonAgregarLista.onclick = function(){ 
+                var li= document.createElement("li");//guarda nombre de la lista
+                var liValue=input.value;
+                var nombre=document.createTextNode(liValue);
+                li.appendChild(nombre);
+               
+                document.getElementById("UL").appendChild(li);
+            }
+        }
     }
-  }
-  input.type="textarea";
 }
-
 

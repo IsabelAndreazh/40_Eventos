@@ -4,7 +4,7 @@
 		<meta charset="UTF-8"> 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-		<title>TodoApp</title> 
+		<title>Trello v1</title> 
 		<link rel="shortcut icon" href="">
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
@@ -14,17 +14,11 @@
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body >
-		<!-- VERSIÓN 0.0.1
-Un elemento en el HTML con el mensaje "Añadir una lista", que al dar click muestre un input y un botón (formulario) para que el usuario ingrese el nombre de la lista. -->
-
-
-		<div class="container"><!-- cabecera -->
+		<div class="container">
 			<div class="row ">
-				<p class="lista" onclick="nombreDeLaLista()">añadir una lista</p>
-				<div class="checkbox">
-					<input type="textarea" name="gvxb" id="lista">
-					<button ></button>
-				</div>
+				<button id="boton" type="button" class="btn btn-md  btn-success mg-3" onclick="lista()" >añadir una lista</button>
+				<div id="formulario" ><ul id="UL"></ul></div>
+
 			</div>		
 		</div>
 		

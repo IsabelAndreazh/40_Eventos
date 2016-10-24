@@ -1,22 +1,18 @@
-.mb-1{	margin-bottom: 1%;}
+.mg-3{	margin: 3%;}
 
-.bg-gray{	background-color: #CBC1C1;}
-.pre-scrollable{height: 5em;}
-p{
+
+#formulario{
+	padding: 5%;
+	background-color: gray;
+}
+
+
+h1{
+	cursor: pointer;
 	color: green;
 	text-align: center;
 	margin-top: 3%;
 }
-
-ul li {
-    cursor: pointer;
-    list-style-type: none;
-}
-
-ul li.checked{
-    text-decoration: line-through;
-}
-
 
 @media screen and (max-width : 600px) {
 }
