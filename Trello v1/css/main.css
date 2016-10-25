@@ -3,15 +3,9 @@
 
 #formulario{
 	padding: 5%;
-	background-color: gray;
 }
-
-
-h1{
-	cursor: pointer;
-	color: green;
-	text-align: center;
-	margin-top: 3%;
+.estilo{border-radius: 89%;
+background-color: grey;
 }
 
 @media screen and (max-width : 600px) {

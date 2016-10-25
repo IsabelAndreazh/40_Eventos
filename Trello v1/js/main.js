@@ -1,10 +1,14 @@
 function lista() { 
+
     var input=document.createElement("input"); // agrega lista
     var textoInput=document.createTextNode("Guardar");
     input.id="guardarInput";
+    input.placeholder="ingresa nombre de la lista"
     input.appendChild(textoInput);
     var inputValue=document.getElementById("formulario");
     formulario.appendChild(input);
+    inputValue.style.background="gray";
+    inputValue.style.color="black";
 
     var botonNombreLista=document.createElement("button");
     var texto=document.createTextNode("Guardar");
@@ -12,7 +16,13 @@ function lista() {
     botonNombreLista.appendChild(texto);
     formulario.appendChild(botonNombreLista);
 
-    botonNombreLista.onclick = function(){ 
+
+    if(inputValue ===''){
+        alert("Escribe algo");
+    }
+
+    botonNombreLista.onclick = function(){
+        formulario.setAttribute("class","pull-left") 
         var div= document.createElement("div");//guarda nombre de la lista
         var divValue=input.value;
         var titulo=document.createTextNode(divValue);
@@ -23,6 +33,7 @@ function lista() {
         var texto=document.createTextNode("Añadir lista");
         botonAñadirLista.className="submit";
         botonAñadirLista.appendChild(texto);
+        botonAñadirLista.style.display="block";
         formulario.appendChild(botonAñadirLista);
 
         botonAñadirLista.onclick = function(){ // agrega tarjeta
